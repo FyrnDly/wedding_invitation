@@ -1,0 +1,326 @@
+// Color
+$primary90 : #884A39;
+$primary50 : #C38154;
+$primary10 : #F9E0BB;
+$black : #100303;
+$white : #F7F7F7;
+$neutral90 : #11070A;
+$neutral80 : #150B0E;
+$neutral70 : #1A1214;
+$neutral60 : #1F1B1B;
+$neutral50 : #252525;
+$neutral40 : #7C7C7C;
+$neutral30 : #BDBDBD;
+$neutral20 : #E9E9E9;
+$neutral10 : #F4F4F4;
+
+// Typography
+body{
+    // Regular
+    font-family: 'Mulish', sans-serif;
+    color: $neutral70;
+    background-color: $white;
+    font-size: 1.125rem;
+    letter-spacing: 0.225px;
+    @media screen and (max-width:480px) {
+        font-size: 1rem;
+    }
+    a{
+        font-family: 'Mulish', sans-serif;
+        color: $neutral80;
+        letter-spacing: 0.225px;
+        text-decoration: none;
+        font-weight: 700;
+        &.light{
+            font-weight: 200;
+        }
+        &:hover{
+            color: $primary90;
+        }
+    }
+    b{
+        font-weight: 700;
+        color: $neutral80;
+    }
+    span{
+        font-weight: 200;
+    }
+    // small
+    small{
+        font-size: 0.875rem;
+        letter-spacing: 0.035px;
+        font-weight: 200;
+        b{
+            font-weight: 400;
+            color: $neutral80;
+        }
+    }
+    // Heading
+    h1, h2, h3, h4, h5, .special{
+        font-family: 'Frank Ruhl Libre', serif;
+        color: $neutral90;
+        margin: 0;
+        b{
+            font-weight: 700;
+        }
+        span{
+            font-weight: 300;
+        }
+    }
+    h1{
+        font-size: 3rem;
+        font-weight: 500;
+        letter-spacing: 0.96px;
+        @media screen and (max-width:480px) {
+            font-size: 2.375rem;
+        }
+    }
+    h2{
+        font-size: 2.375rem;
+        font-weight: 500;
+        letter-spacing: 0.57px;
+        @media screen and (max-width:480px) {
+            font-size: 2.1.875rem;
+        }
+    }
+    h3{
+        font-size: 1.875rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        @media screen and (max-width:480px) {
+            font-size: 1.5rem;
+        }
+    }
+    h4{
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.1.125rem;
+        @media screen and (max-width:480px) {
+            font-size: 1.1875rem;
+        }
+    }
+    h5{
+        font-size: 1.1875rem;
+        font-weight: 500;
+        letter-spacing: 0.095px;
+        @media screen and (max-width:480px) {
+            font-size: 1rem;
+        }
+    }
+    // Special Heading
+    .special{
+        font-size: 3.75rem;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        @media screen and (max-width:480px) {
+            font-size: 2.375rem;
+        }
+    }
+}
+
+// Button
+.btn{
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    // No fill
+    background: none;
+    border: none;
+    // text
+    font-size: 1.1875rem;
+    font-weight: 700;
+    letter-spacing: 0.095px;
+    color: $neutral80;
+    &:hover{
+        color: $primary50;
+        background-color: $neutral20;
+    }
+    // Primary
+    &.btn-primary{
+        color: $neutral10;
+        background-color: $primary50;
+        box-shadow: 2px 6px 16px 0px rgba(0, 0, 0, 0.10);
+        &:hover{
+            background-color: $primary90;
+        }
+    }
+    &.btn-dis{
+        color: $neutral40;
+        background-color: $primary10;
+        
+    }
+}
+
+// Navbar
+nav{
+    background-color: $white;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+    transition: transform 0.75s ease-in-out;
+    transform: translateY(-100%);
+    &:not(.hidden){
+        transform: translateY(0);
+    }
+    .navbar-brand:hover{
+        text-decoration: none;
+    }
+    .nav-item{
+        display: flex;
+        padding: 0px 5px;
+        align-items: center;
+        gap: 10px;
+        .nav-link{
+            font-size: 18px;
+            font-weight: 200;
+            letter-spacing: 0.225px;
+            color: $neutral70;
+            &:hover,&.active{
+                color: $neutral90;
+                text-decoration: none;
+                font-weight: 700;
+            }
+            &:active{
+                color: $neutral70;
+            }
+        }
+    }
+}
+
+// Banner
+header{
+    .text{
+        height: 58vh;
+        text-align: center;
+    }
+    .image{
+        background-color: $primary50;
+        width: 100%;
+        height: 42vh;
+        .container{
+            padding-bottom: 50px;
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// Section
+section{
+    margin-top: 100px;
+    padding-top: 50px;
+    .container{
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    h3{
+        padding: 0px 20px;
+        border-bottom: 1px solid $neutral90;
+        width: fit-content;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+// About
+.about{
+    img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    p{
+        text-align: justify;
+    }
+}
+
+// Date & Time
+.date{
+    width: 100%;
+    background-color: $primary50;
+    color: $neutral20;
+    h3{
+        border-bottom: 1px solid $neutral10;
+    }
+    h2 b,h3, b{
+        color: $neutral10;
+    }
+    h2{
+        margin-bottom: 10px;
+    }
+    p,b{
+        width: fit-content;
+        height: fit-content;
+        margin: 0px;
+    }
+    img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+// Location
+.location{
+    margin-top: 0px;
+    background-color: $primary50;
+    height: 400px;
+    margin-bottom: -325px;
+}
+.location-content{
+    .container{
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    h3{
+        padding: 0px 20px;
+        border-bottom: 1px solid $neutral10;
+        color: $neutral10;
+        width: fit-content;
+        text-align: center;
+        margin: auto;
+    }
+    img{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+        border-radius: 25px;
+        box-shadow: 2px 6px 16px 0px rgba(0, 0, 0, 0.10);
+    }
+    .btn{
+        width: 100%;
+    }
+}
+
+// Contact
+.contact{
+    text-align: center;
+    .btn{
+        width: fit-content;
+        margin: auto;
+    }
+    .modal-body{
+        a.nav-link{
+            &:hover b{
+                color: $primary50 !important;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Footer
+footer{
+    margin-top: 100px;
+    background-color: $white;
+    box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    padding: 10px 0px;
+}
